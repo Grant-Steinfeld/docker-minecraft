@@ -1,7 +1,8 @@
 # Run a Minecraft Server in a Docker container, with just docker-compose!
-## Motivation?
-It's just not necessary to go to the complexity and expense to run a small scale 
-production grade containerized applicaton.
+
+## Why?
+It's just not necessary to go to the complexity and expense of say Kubernetes, Apache Mesos, or Red Hat Openshift jst 
+to run a small scale yet production grade containerized applicaton or microservice.
 
 By following along with this repository I will show you how to use `Docker` and `docker-compose` along with 
 some excellent methods advocated by some of the industries leaders in Docker.
@@ -31,19 +32,22 @@ docker-compose -f ./docker-compose-local.yaml up
 	<summary>
 		<strong> Learn more: Docker command equivalent </strong>
 	</summary>
-	<body>
-		## Docker command to run this
-		```sh
-		docker run -d -p 25565:25565 --name mc -e EULA=TRUE itzg/minecraft-server
-		```
+<body>
 		
-		[learn more from itzg github repo](https://github.com/itzg/docker-minecraft-server)
+### Docker command to run this
+		
+```python
+docker run -d -p 25565:25565 --name mc -e EULA=TRUE itzg/minecraft-server
+```
+		
+[learn more from itzg github repo](https://github.com/itzg/docker-minecraft-server)
+		
 	</body>
 </details>
 
 ## Motivation - KISS
 Use `docker-compose` (a Python program, did you
-know that?  )  or hipsters, use `docker compose` 
+know that?  )  or hipsters, use the built into Docker, `docker compose` 
 	
 
 Yes, use a container without the heavier weight orchestration tools, and be good enough for the most of us 
