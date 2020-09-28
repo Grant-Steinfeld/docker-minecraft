@@ -28,11 +28,7 @@ mkdir ~/<local-data-dir>
 docker-compose -f ./docker-compose-local.yaml up
 ```
 
-<details>
-	<summary>
-		<strong> Learn more: Docker command equivalent </strong>
-	</summary>
-<body>
+<details><summary><strong> Learn more: Docker command equivalent </strong></summary><body>
 		
 ### Docker command to run this
 		
@@ -42,7 +38,7 @@ docker run -d -p 25565:25565 --name mc -e EULA=TRUE itzg/minecraft-server
 		
 [learn more from itzg github repo](https://github.com/itzg/docker-minecraft-server)
 		
-	</body>
+</body>
 </details>
 
 ## Motivation - KISS
