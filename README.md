@@ -46,8 +46,7 @@ Use `docker-compose` (a Python program, did you
 know that?  )  or hipsters, use the built into Docker, `docker compose` 
 	
 
-Yes, use a container without the heavier weight orchestration tools, and be good enough for the most of us 
-- `say goodbye to Kubernetes` ;)
+
 
 ### References
 
