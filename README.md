@@ -20,6 +20,25 @@ of the Docker container restarting due to failure etc )
 1. Running a Minecraft server in Docker on a Linux Server
 So I setup docker and docker-compose on my CentOS 7 VM running on Digital Ocean.
 
+### Docker command to run this
+		
+```bash
+#use the default docker context
+docker context use default
+
+docker run -d -p 25565:25565 --name mc -e EULA=TRUE itzg/minecraft-server
+
+#you may run out of memory we did :) so this may be  better commandline setup
+
+docker run -d -p 25565:25565 --memory="1g" --memory-swap="3g" --volume /home/developer/minecraft-data:/data --name mc -e EULA=TRUE itzg/minecraft-server
+```
+	
+	
+
+
+
+<details><summary><strong> Prefer, docker-compose see here </strong></summary><body>
+	
 ```sh
 #use the default docker context
 docker context use default
@@ -27,19 +46,7 @@ docker context use default
 mkdir ~/<local-data-dir>
 docker-compose -f ./docker-compose-local.yaml up
 ```
-
-<details><summary><strong> Learn more: Docker command equivalent </strong></summary><body>
-		
-### Docker command to run this
-		
-```python
-docker run -d -p 25565:25565 --name mc -e EULA=TRUE itzg/minecraft-server
-
-#you may run out of memory we did :) so this may be  better commandline setup
-
-docker run -d -p 25565:25565 --memory="1g" --memory-swap="3g" --volume /home/developer/minecraft-data:/data --name mc -e EULA=TRUE itzg/minecraft-server
-```
-		
+	
 [learn more from itzg github repo](https://github.com/itzg/docker-minecraft-server)
 		
 </body>
