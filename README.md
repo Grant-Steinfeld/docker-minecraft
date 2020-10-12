@@ -38,6 +38,12 @@ docker run -d -p 25565:25565 --memory="1g" --memory-swap="3g" --volume /home/dev
 
 
 <details><summary><strong> Prefer, docker-compose see here </strong></summary><body>
+
+
+Use `docker-compose` (a Python program, did you
+know that?  )  or hipsters, use the built into Docker, `docker compose` ( may not be availible/GA yet!)
+	
+	
 	
 ```sh
 #use the default docker context
@@ -46,16 +52,15 @@ docker context use default
 mkdir ~/<local-data-dir>
 docker-compose -f ./docker-compose-local.yaml up
 ```
+
+
+	
 	
 [learn more from itzg github repo](https://github.com/itzg/docker-minecraft-server)
 		
 </body>
 </details>
 
-## Motivation - KISS
-Use `docker-compose` (a Python program, did you
-know that?  )  or hipsters, use the built into Docker, `docker compose` 
-	
 
 
 
