@@ -34,6 +34,10 @@ docker-compose -f ./docker-compose-local.yaml up
 		
 ```python
 docker run -d -p 25565:25565 --name mc -e EULA=TRUE itzg/minecraft-server
+
+#you may run out of memory we did :) so this may be  better commandline setup
+
+docker run -d -p 25565:25565 --memory="1g" --memory-swap="3g" --volume /home/developer/minecraft-data:/data --name mc -e EULA=TRUE itzg/minecraft-server
 ```
 		
 [learn more from itzg github repo](https://github.com/itzg/docker-minecraft-server)
